@@ -6,7 +6,7 @@ require_once( 'functions.php' );
 
 <head profile="http://gmpg.org/xfn/11">
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-	<title><?php /* If this is the frontpage */ if ( is_home() ) { ?> Frisco Texas Church <?php } else if (is_category()) { echo single_cat_title(); } else { the_title(); }?> – <?php bloginfo('name'); ?></title>
+	<title><?php /* If this is the frontpage */ if ( is_home() ) { ?> Frisco Texas Church <?php } else if (is_category()) { echo single_cat_title(); } else { the_title(); }?> - <?php bloginfo('name'); ?></title>
 
 	<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats please -->
 
@@ -14,8 +14,8 @@ require_once( 'functions.php' );
 		@import url(  "http://www.stonebriar.org/fileadmin/templates_3.0/framework/css/stonebriar_screen.css" );
 	</style>
 
-	<link rel="stylesheet" type="text/css" href="<? bloginfo('template_url'); ?>/style-blog.css" media="screen, projection" />
-	<link rel="stylesheet" type="text/css" href="<? bloginfo('template_url'); ?>/css/stonebriar_print.css" media="print" />
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style-blog.css" media="screen, projection" />
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/stonebriar_print.css" media="print" />
 	<!--[if IE]>
 		<link rel="stylesheet" href='/fileadmin/templates_3.0/framework/css/ie_fixes.css' type="text/css" media="screen, projection" />
 	<![endif]-->
@@ -23,10 +23,10 @@ require_once( 'functions.php' );
 	<script type="text/javascript">
 		document.write('<link rel="stylesheet" href="http://www.stonebriar.org/fileadmin/templates_3.0/framework/css/preset.css" type="text/css" media="screen, projection" />');
 	</script>
-	<script type="text/javascript" src="<? bloginfo('template_url'); ?>/js/jquery.js"></script>
-	<script type="text/javascript" src="<? bloginfo('template_url'); ?>/js/global.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/global.js"></script>
 	
-	<?php if (! is_page('subscribe')) {?><script type="text/javascript" src="<? bloginfo('template_url'); ?>/js/imgfloat.js"></script><?php } ?>
+	<?php if (! is_page('subscribe')) {?><script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/imgfloat.js"></script><?php } ?>
 
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://feeds.feedburner.com/StonebriarCommunityChurch" />
 
@@ -66,7 +66,7 @@ require_once( 'functions.php' );
 					Search
 				</label>
 				<input type="text" id="search_field" name="s" />
-				<input type="image" id="search_button" src="<? bloginfo('template_url'); ?>/images/search_button.gif" alt="Search" />
+				<input type="image" id="search_button" src="<?php bloginfo('template_url'); ?>/images/search_button.gif" alt="Search" />
 
 			</p>
 			<div class="clear">&nbsp;</div>
@@ -104,7 +104,7 @@ require_once( 'functions.php' );
 </div>
 
 <!-- end #header_wrap -->
-<?
+<?php
 	// main nav
 	$nav = curl_init('http://www.stonebriar.org/?blogheadermenu&type=10');
 	
@@ -115,10 +115,10 @@ require_once( 'functions.php' );
 <div id="content_wrap">
 	<div id="content" class="blog">
 		<p id="breadcrumbs">
-			<a href="/">Home</a> &raquo; <a href="<? bloginfo('home'); ?>">Blog</a> <? if(is_single()){ ?>&raquo; <? the_title(); ?> <? }elseif(is_category()){ ?>&raquo; <? single_cat_title(); ?> <? }elseif(is_author()){ ?>
-				<? $curauth = get_userdata($_GET['author']); ?>
-				&raquo; <?=$curauth->nickname;?>
-			<? }elseif(is_page('Archive')){ ?>&raquo; Archive <? } ?>
+			<a href="/">Home</a> &raquo; <a href="<?php bloginfo('home'); ?>">Blog</a> <?php if(is_single()){ ?>&raquo; <?php the_title(); ?> <?php }elseif(is_category()){ ?>&raquo; <?php single_cat_title(); ?> <?php }elseif(is_author()){ ?>
+				<?php $curauth = get_userdata($_GET['author']); ?>
+				&raquo; <?php echo $curauth->nickname;?>
+			<?php }elseif(is_page('Archive')){ ?>&raquo; Archive <?php } ?>
 		</p>
 		<div id="blog-header"></div>
-		<p class="blog-header big-archive-link"><a href="<? bloginfo('url'); ?>/archive/"><img src="<? bloginfo('template_url'); ?>/images/button_explore_archives-header.gif" alt="Explore the Archives" /></a></p>
+		<p class="blog-header big-archive-link"><a href="<?php bloginfo('url'); ?>/archive/"><img src="<?php bloginfo('template_url'); ?>/images/button_explore_archives-header.gif" alt="Explore the Archives" /></a></p>

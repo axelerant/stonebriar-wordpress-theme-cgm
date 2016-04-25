@@ -3,7 +3,7 @@
 	Template Name: Feeds List
 */
 ?>
-<? get_header(); ?>
+<?php get_header(); ?>
 		<div class="two_thirds">
 			<h1>RSS Subscriptions - Stonebriar Community Church</h1>
 			<h2>General Feeds (Recommended)</h2>
@@ -36,15 +36,15 @@
 		
 		<div class="third">
 			<div id="blogs-by-email">
-				<img src="<? bloginfo('template_url'); ?>/images/blogs-by-email.jpg" alt="Blogs By Email" />
+				<img src="<?php bloginfo('template_url'); ?>/images/blogs-by-email.jpg" alt="Blogs By Email" />
 <!--
 				<form style="text-align:center;" action="http://www.feedburner.com/fb/a/emailverify" method="post" target="popupwindow" onsubmit="window.open('http://www.feedburner.com', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><p>Enter your email address:</p><p><input type="text" style="width:140px" name="email"/></p><input type="hidden" value="http://feeds.feedburner.com/~e?ffid=903647" name="url"/><input type="hidden" value="Stonebriar Community Church Blog" name="title"/><input type="hidden" name="loc" value="en_US"/><input type="submit" value="Subscribe" /><p>Delivered by <a href="http://www.feedburner.com" target="_blank">FeedBurner</a></p></form>
 -->
 
 <form style="text-align:center;" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=StonebriarCommunityChurch', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><p>Enter your email address:</p><p><input type="text" style="width:140px" name="email"/></p><input type="hidden" value="StonebriarCommunityChurch" name="uri"/><input type="hidden" name="loc" value="en_US"/><input type="submit" value="Subscribe" /><p>Delivered by <a href="http://feedburner.google.com" target="_blank">FeedBurner</a></p></form>
-				<img src="<? bloginfo('template_url'); ?>/images/bbe-bottom.jpg" />
+				<img src="<?php bloginfo('template_url'); ?>/images/bbe-bottom.jpg" />
 			</div>
 		</div>
 		<!-- end .full -->
 		
-<? get_footer(); ?>
+<?php get_footer(); ?>

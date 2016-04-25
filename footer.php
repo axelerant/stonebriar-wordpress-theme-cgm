@@ -12,7 +12,7 @@
 			</dt>
 			<?php wp_get_archives('type=postbypost&limit=10&format=custom&before=<dd>&after=</dd>'); ?>
 			<dd>
-				<a href="<? bloginfo('url'); ?>/archive/">
+				<a href="<?php bloginfo('url'); ?>/archive/">
 					(More)
 				</a>
 			</dd>
@@ -26,7 +26,7 @@
 					<span class="clear">&nbsp;</span>
 				</h4>
 				<ul>
-					<? wp_list_categories('title_li=&child_of=5&hide_empty=0'); ?>
+					<?php wp_list_categories('title_li=&child_of=5&hide_empty=0'); ?>
 				</ul>
 			</li>
 		</ul>
@@ -39,16 +39,16 @@
 					<span class="clear">&nbsp;</span>
 				</h4>
 				<ul>
-					<? wp_list_categories('title_li=&child_of=6&hide_empty=0'); ?>
+					<?php wp_list_categories('title_li=&child_of=6&hide_empty=0'); ?>
 				</ul>
 			</li>
 		</ul>
 		<ul id="linkage">
-			<? wp_list_bookmarks('categorize=1&category=3,4&show_images=0&show_description=0&orderby=url&title_before=<h4><span class=highlight>&title_after=</span></h4><span class=clear> </span>'); ?>
+			<?php wp_list_bookmarks('categorize=1&category=3,4&show_images=0&show_description=0&orderby=url&title_before=<h4><span class=highlight>&title_after=</span></h4><span class=clear> </span>'); ?>
 		</ul>
 		
 		<span class="clear">&nbsp;</span>
-		<p class="big-archive-link"><a href="<? bloginfo('url'); ?>/archive/"><img src="<? bloginfo('template_url'); ?>/images/button_explore_archives.gif" alt="Explore the Archives" /></a></p>
+		<p class="big-archive-link"><a href="<?php bloginfo('url'); ?>/archive/"><img src="<?php bloginfo('template_url'); ?>/images/button_explore_archives.gif" alt="Explore the Archives" /></a></p>
 
 	</div>
 	<!-- end #content_sub -->
@@ -62,13 +62,13 @@
 			<br />
 
 			<a href="http://www.stonebriar.org/index.php?id=2812&amp;tx_pilmailform_pi1[text][refpage]=<?php echo 'http://'.$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"]; ?>">Problems with the site?</a>
-			<? if(is_home()){?>
+			<?php if(is_home()){?>
 			<a href="/index.php?id=2789&amp;tipUrl=http://www.stonebriar.org/index.php?id=2789&tipUrl=http://www.stonebriar.org/blog/" class="email_friend">Email to a friend</a>
-		<?}else{?>
-			<a href="/index.php?id=2789&amp;tipUrl=http://www.stonebriar.org/index.php?id=2789&tipUrl=<? the_permalink(); ?>" class="email_friend">Email to a friend</a>
-		<?}?>
-			<a href="<? bloginfo('home'); ?>/subscribe/" class="email_registration">Blogs by email</a>
-			<a href="<? bloginfo('home'); ?>/subscribe/" class="feed">Grab our feed</a>
+		<?php }else{?>
+			<a href="/index.php?id=2789&amp;tipUrl=http://www.stonebriar.org/index.php?id=2789&tipUrl=<?php the_permalink(); ?>" class="email_friend">Email to a friend</a>
+		<?php }?>
+			<a href="<?php bloginfo('home'); ?>/subscribe/" class="email_registration">Blogs by email</a>
+			<a href="<?php bloginfo('home'); ?>/subscribe/" class="feed">Grab our feed</a>
 		</span>
 		<!-- end #footer_left -->
 		<address class="vcard">

@@ -18,6 +18,8 @@
 	</ul>
 
 	<h4>Disclaimer</h4>
-	<p>You are on the blog now. It’s stuff from the hearts and minds of Stonebriar staff, volunteers and guest authors. It is more people's views than anything else, but we wouldn't have let them author these posts if they didn't agree with the core beliefs we hold true.  This blog is a casual forum for polite, open discussion, not a platform for pronouncing doctrine. Know that what you read here is opinion and not the official position or teachings of the church.</p>
+	<p>Welcome to our blog. The articles posted here are written by staff, volunteers, and guest authors and are intended for polite discussion, not heated debate. The views and opinions expressed here are those of the individual authors and do not necessarily represent the teachings of Stonebriar Community Church. 
+<br><br>Any articles and other links included here are items the individual authors considered helpful or of interest. Stonebriar Community Church does not necessarily endorse or agree with the content or views expressed on the linked websites nor is it responsible for any information or advertisements on external websites.
+</p>
 </div>
 <!-- end .third -->

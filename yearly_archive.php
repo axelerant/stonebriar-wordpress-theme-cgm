@@ -3,12 +3,12 @@
 	Template Name: Yearly Archives
 */
 ?>
-<? get_header(); ?>
+<?php get_header(); ?>
 		<div class="full">
 		
-			<? srg_clean_archives(); ?>
+			<?php srg_clean_archives(); ?>
 
 		</div>
 		<!-- end .full -->
 		
-<? get_footer(); ?>
+<?php get_footer(); ?>

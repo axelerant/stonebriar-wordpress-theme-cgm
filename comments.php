@@ -8,7 +8,7 @@
 		<p class="notice">
 			This post is password protected. Please login to add your comment.
 		</p>
-<?
+<?php
 			return;
 		}
 	}
@@ -19,43 +19,43 @@
 <h3>
 	<a name="comments"></a>Comments
 </h3>
-<? if ($comments) : ?>
+<?php if ($comments) : ?>
 <ol id="commentlist">
-	<? foreach ($comments as $comment) : ?>
-	<li class="<?=$oddcomment;?>">
+	<?php foreach ($comments as $comment) : ?>
+	<li class="<?php echo $oddcomment;?>">
 		<span class="comment_arrow">&nbsp;</span>
-		<div class="comment_wrap<? if($comment->user_id){ ?> staff<? } ?>">
-			<a name="comment-<? comment_ID(); ?>"></a>
+		<div class="comment_wrap<?php if($comment->user_id){ ?> staff<?php } ?>">
+			<a name="comment-<?php comment_ID(); ?>"></a>
 			<p>
 				<span class="comment_name">
-					<? comment_author_link() ?><? if($comment->user_id){ ?><span class="caps"> - staff</span><? } ?>
+					<?php comment_author_link() ?><?php if($comment->user_id){ ?><span class="caps"> - staff</span><?php } ?>
 				</span>
 				<span class="comment_date">
-					<? comment_date('F jS'); ?> at <? comment_time(); ?>
+					<?php comment_date('F jS'); ?> at <?php comment_time(); ?>
 				</span>
 				<span class="clear">&nbsp;</span>
 			</p>
 			<p>
-				<? comment_text(); ?>
+				<?php comment_text(); ?>
 			</p>
 		</div>
 	</li>
-		<? if ('odd' == $oddcomment) $oddcomment = 'even'; else $oddcomment = 'odd'; ?>
-	<? endforeach; ?>
+		<?php if ('odd' == $oddcomment) $oddcomment = 'even'; else $oddcomment = 'odd'; ?>
+	<?php endforeach; ?>
 </ol>
-<? endif; ?>
+<?php endif; ?>
 <!-- end #commentlist -->
-<? if($post->comment_status == 'open'){ ?>
+<?php if($post->comment_status == 'open'){ ?>
 <h3>
 	Add Your Thoughts
 </h3>
-<form method="post" action="<?=get_option('siteurl');?>/wp-comments-post.php" id="commentform">
+<form method="post" action="<?php echo get_option('siteurl');?>/wp-comments-post.php" id="commentform">
 	<table cellspacing="0">
 		<?php if ( $user_ID ) : ?>
 
 		<tr>
 			<td colspan="2">
-				Logged in as <a href="<?get_option('siteurl');?>/wp-admin/profile.php"><?=$user_identity;?></a>. <a href="<?=get_option('siteurl');?>/wp-login.php?action=logout" title="Log out of this account">Logout &raquo;</a>
+				Logged in as <a href="<?php get_option('siteurl');?>/wp-admin/profile.php"><?php echo $user_identity;?></a>. <a href="<?php echo get_option('siteurl');?>/wp-login.php?action=logout" title="Log out of this account">Logout &raquo;</a>
 			</td>
 		</tr>
 
@@ -94,7 +94,7 @@
 			</td>
 
 		</tr>
-		<? endif; ?>
+		<?php endif; ?>
 		<tr>
 			<th scope="row">
 				<label for="comment">
@@ -110,17 +110,17 @@
 	<!-- end .form_wrap -->
 	<p>
 		<span class="right">
-			<input type="image" src="<? bloginfo('template_url'); ?>/images/button_post_comment.gif" alt="Post Comment" />
+			<input type="image" src="<?php bloginfo('template_url'); ?>/images/button_post_comment.gif" alt="Post Comment" />
 		</span>
-		<input type="hidden" name="comment_post_ID" value="<?=$id;?>" />
+		<input type="hidden" name="comment_post_ID" value="<?php echo $id;?>" />
 		<?php do_action('comment_form', $post->ID); ?>
 		<span class="clear">&nbsp;</span>
 	</p>
 </form>
-<? }else{ ?>
+<?php }else{ ?>
 	<p class="notice">
 
 		Comments are closed for this post.
 	</p>
-<? } ?>
+<?php } ?>
 <!-- end #commentform -->
